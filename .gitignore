@@ -1,3 +1,15 @@
+# C build artifacts
+*.o
+*.obj
+*.exe
+!.gitkeep
+
+# Local toolchain + helper junk (never commit a 380 MB compiler)
+_tools/toolchain/
+_tools/node_modules/
+_tools/.npmcache/
+_out/
+
 # Dependencies
 node_modules/
 vendor/

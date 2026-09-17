@@ -1,0 +1,7 @@
+# Normalize line endings: .cmd must stay CRLF for Windows, text files stay LF.
+* text=auto eol=lf
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.pdf binary
+*.exe binary
+*.o binary
