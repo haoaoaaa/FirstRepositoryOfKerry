@@ -1,0 +1,42 @@
+{
+  // ---------------------------------------------------------------------------
+  // Project settings. These travel with the repo, so a teammate cloning it gets
+  // the same one-click compile behaviour.
+  // ---------------------------------------------------------------------------
+
+  // Use the GCC that lives inside this workspace. Without this, cpptools spends
+  // a while hunting for a compiler on the machine and IntelliSense stays broken.
+  "C_Cpp.default.compilerPath": "${workspaceFolder}/_tools/toolchain/w64devkit/bin/gcc.exe",
+  "C_Cpp.default.cStandard": "c11",
+  "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+
+  // Teach the editor that .h files are C, not C++ (better error messages).
+  "files.associations": {
+    "*.h": "c"
+  },
+
+  // The assignment says: keep everything ASCII/English. Being explicit avoids
+  // the classic Windows mojibake when reading/writing text files.
+  "files.encoding": "utf8",
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // Encode the integrated terminal as UTF-8 too.
+  "terminal.integrated.env.windows": {
+    "PYTHONIOENCODING": "utf-8"
+  },
+
+  // Don't let the editor hide the compile errors we care about.
+  "C_Cpp.errorSquiggles": "enabled",
+
+  // Build artifacts should not clutter search results.
+  "search.exclude": {
+    "**/_tools/toolchain": true,
+    "**/*.exe": true,
+    "**/.git": true
+  },
+  "files.watcherExclude": {
+    "**/_tools/toolchain/**": true
+  }
+}

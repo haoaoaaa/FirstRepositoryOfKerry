@@ -36,7 +36,10 @@ yarn-error.log*
 Thumbs.db
 desktop.ini
 .idea/
-.vscode/
+
+# NOTE: .vscode/ is deliberately NOT ignored. tasks.json / launch.json /
+# c_cpp_properties.json are what gives this project its one-click compile,
+# so they belong in the repo.
 
 # Python
 __pycache__/
